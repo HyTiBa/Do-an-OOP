@@ -1,0 +1,29 @@
+public class gaminglaptop extends Laptop {
+    private String RGBLED;
+    private String GraphicsCard;
+
+    public gaminglaptop(String RGBLED, String GraphicsCard, String mamaytinh, String donvitinh, int soluong, double dongia) {
+        super(mamaytinh, donvitinh, soluong, dongia);
+        this.RGBLED = RGBLED;
+        this.GraphicsCard = GraphicsCard;
+    }
+    
+    @Override
+    public void xuatthongtin(){
+        super.xuatthongtin();
+        System.out.println("Den LEDRGB: "+RGBLED);
+        System.out.println("Card do hoa: "+GraphicsCard);
+    }
+    public String getRGBLED(){
+       return RGBLED;
+    }
+    public void setRGBLED(String RGBLED){
+        this.RGBLED = RGBLED;     
+    }
+    public String getGraphicsCard(){
+        return GraphicsCard;
+    }
+    public void setGraphicsCard(String GraphicsCard){
+        this.GraphicsCard=GraphicsCard;
+    }
+}
