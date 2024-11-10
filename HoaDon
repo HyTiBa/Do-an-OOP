@@ -1,0 +1,66 @@
+import java.util.Date;
+
+
+public class HoaDon {
+    private String MaHoaDon;
+    private Date NgayLaphoadon;
+    private String MaKH;
+    private String MaNV;
+    private float tongtien;
+
+    public HoaDon(String MaHoaDon, Date NgayLaphoadon, String MaKH, String MaNV, float tongtien) {
+        this.MaHoaDon = MaHoaDon;
+        this.NgayLaphoadon = NgayLaphoadon;
+        this.MaKH = MaKH;
+        this.MaNV = MaNV;
+        this.tongtien = tongtien;
+    }
+
+    public String getMaHoaDon() {
+        return MaHoaDon;
+    }
+
+    public void setMaHoaDon(String MaHoaDon) {
+        this.MaHoaDon = MaHoaDon;
+    }
+
+    public Date getNgayLaphoadon() {
+        return NgayLaphoadon;
+    }
+
+    public void setNgayLaphoadon(Date NgayLaphoadon) {
+        this.NgayLaphoadon = NgayLaphoadon;
+    }
+
+    public String getMaKH() {
+        return MaKH;
+    }
+
+    public void setMaKH(String MaKH) {
+        this.MaKH = MaKH;
+    }
+
+    public String getMaNV() {
+        return MaNV;
+    }
+
+    public void setMaNV(String MaNV) {
+        this.MaNV = MaNV;
+    }
+
+    public float getTongtien() {
+        return tongtien;
+    }
+
+    public void setTongtien(float tongtien) {
+        this.tongtien = tongtien;
+    }
+            
+    public void xuatthongtin(){
+        System.out.println("ma hoa don: " + MaHoaDon);
+        System.out.println("ngay lap hoa don: " + NgayLaphoadon);
+        System.out.println("ma kh: " + MaKH);
+        System.out.println("ma nv: " + MaNV);
+        System.out.println("tong tien: " + tongtien);
+    }
+}
