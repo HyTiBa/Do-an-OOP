@@ -1,0 +1,55 @@
+import java.util.Date;
+
+public class ChiTietHoaDon extends HoaDon {
+    private String mamaytinh;
+    private String soluong;
+    private float dongia;
+
+    public ChiTietHoaDon( String mamaytinh, String soluong, float dongia, float thanhtien, String MaHoaDon, Date NgayLaphoadon, String MaKH, String MaNV, float tongtien) {
+        super(MaHoaDon, NgayLaphoadon, MaKH, MaNV, tongtien);
+        this.mamaytinh = mamaytinh;
+        this.soluong = soluong;
+        this.dongia = dongia;
+        this.thanhtien = thanhtien;
+    }
+
+    public String getMamaytinh() {
+        return mamaytinh;
+    }
+
+    public void setMamaytinh(String mamaytinh) {
+        this.mamaytinh = mamaytinh;
+    }
+
+    public String getSoluong() {
+        return soluong;
+    }
+
+    public void setSoluong(String soluong) {
+        this.soluong = soluong;
+    }
+
+    public float getDongia() {
+        return dongia;
+    }
+
+    public void setDongia(float dongia) {
+        this.dongia = dongia;
+    }
+
+    public float getThanhtien() {
+        return thanhtien;
+    }
+
+    public void setThanhtien(float thanhtien) {
+        this.thanhtien = thanhtien;
+    }
+    private float thanhtien;
+    
+    public void xuatthongtin(){
+        System.out.println("ma may tinh: " + mamaytinh);
+        System.out.println("so luong: " + soluong);
+        System.out.println("don gia: " + dongia);
+        System.out.println("thanh tien: " + thanhtien);
+    }
+}
