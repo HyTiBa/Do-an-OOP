@@ -5,8 +5,8 @@ public class Main {
         DanhSachTrungTam dsTrungTam = new DanhSachTrungTam();
 
         // Nhập n phần tử mới
-        dsTrungTam.nhapTrungTam(new TrungTam("001", "Trung Tâm A", "Địa chỉ A"));
-        dsTrungTam.nhapTrungTam(new TrungTam("002", "Trung Tâm B", "Địa chỉ B"));
+        dsTrungTam.nhapTrungTam(new TrungTam("001", "Trung Tam A", "Địa chỉ A"));
+        dsTrungTam.nhapTrungTam(new TrungTam("002", "Trung Tam B", "Địa chỉ B"));
 
         // Xuất danh sách
         dsTrungTam.xuatDanhSach();
