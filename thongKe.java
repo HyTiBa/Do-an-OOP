@@ -1,43 +1,42 @@
-// Lớp cơ bản abstract (nếu có)
-abstract class DanhSach {
-    protected String tenDanhSach;
-
-    public DanhSach(String tenDanhSach) {
-        this.tenDanhSach = tenDanhSach;
+import java.util.Scanner;
+public class ThongKe {
+    Scanner scanner = new Scanner(System.in);
+    void soLuongHangNhap(){
+        DanhSachChiTiet danhSachChiTiet = new DanhSachChiTiet();
+        int soLuong = 0;
+        for(ChiTietPhieu chiTiet: danhSachChiTiet.getDanhSach()){
+    soLuong= soLuong + chiTiet.getSoLuong();
+}
+System.out.println("So luong hang trong kho:");
+System.out.println(soLuong);
     }
-
-    public abstract void hienThiThongTin();
+    void DoanhThu(){
+         DanhSachChiTiet danhSachChiTiet = new DanhSachChiTiet();
+        int doanhThu = 0;
+        for(ChiTietPhieu chiTiet: danhSachChiTiet.getDanhSach()){
+    doanhThu= doanhThu + chiTiet.getTongCong();
+}
+System.out.println("So luong hang trong kho:");
+System.out.println(doanhThu);
+    }
+    void inLuaChon(){
+        int option = 1;
+while (option != 0) {
+    System.out.println("---------------------------------------------------------------------------------");
+    System.out.println("1.Xem doanh thu:");
+    System.out.println("2.Xem so luong hang trong kho:");
+    System.out.println("0.Thoat");
+    option = scanner.nextInt();
+    scanner.nextLine();
+    if (option == 1) {
+        DoanhThu();
+    }
+    if (option == 2) {
+        soLuongHangNhap();
+    }
 }
 
-// Lớp Trung tâm thống kê
-public class thongKe extends DanhSach {
-    private DanhSachSanPham danhSachSanPham;
-    private DanhSachKhachHang danhSachKhachHang;
-    private DanhSachDonHang danhSachDonHang;
 
-    public thongKe(DanhSachSanPham dsSanPham, DanhSachKhachHang dsKhachHang, DanhSachDonHang dsDonHang) {
-        super("Trung tâm thống kê");
-        this.danhSachSanPham = dsSanPham;
-        this.danhSachKhachHang = dsKhachHang;
-        this.danhSachDonHang = dsDonHang;
-    }
-
-    @Override
-    public void hienThiThongTin() {
-        System.out.println("Thống kê tổng quan:");
-        System.out.println("Tổng số sản phẩm: " + danhSachSanPham.demSoLuong());
-        System.out.println("Tổng số khách hàng: " + danhSachKhachHang.demSoLuong());
-        System.out.println("Tổng số đơn hàng: " + danhSachDonHang.demSoLuong());
-    }
-
-    // Tính năng đa hình (ví dụ: phân tích theo loại sản phẩm)
-    public void thongKeTheoLoai(String loaiSanPham) {
-        System.out.println("Thống kê sản phẩm loại " + loaiSanPham + ":");
-        danhSachSanPham.hienThiSanPhamTheoLoai(loaiSanPham);
-    }
-
-    public void thongKeDoanhThu() {
-        double tongDoanhThu = danhSachDonHang.tinhTongDoanhThu();
-        System.out.println("Tổng doanh thu: " + tongDoanhThu);
     }
 }
+
